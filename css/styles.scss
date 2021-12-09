@@ -2,3 +2,53 @@
     margin: 0;
     padding: 0;
 }
+
+.hidden {
+    display: none;
+}
+
+.featured-projects__image {
+    max-width: 300px;
+    height: auto;
+}
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+body {
+   color: white;
+   background-color: black;
+   padding: 10vh 15vw 5vh 15vw;
+   @include center;
+   flex-direction: column;
+   .navbar {
+       display: flex;
+       justify-content: left;
+       flex-direction: row;
+       position: fixed;
+       top: 0px;
+       width: 100%;
+       height: 10vh;
+       background-color: rgba(255,255,255, .6); 
+
+       .navbar__icons {
+        @include center;
+        list-style: none;
+        flex-direction: row;
+        padding-left: 1.5vw;
+
+        .navbar__icon {
+            padding: 5px;
+        }
+       }
+       
+   }
+
+}
