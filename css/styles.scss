@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -75,16 +76,50 @@ body {
    }
 
 
+   
    .hero {
         @include center;
         flex-direction: column;
-        min-height: 70vh;
+        min-height: 60vh;
+        margin-bottom: 30vh;
         position: relative;
-      
+        animation-name: slide-fade;
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0, 0.9, 0.95, 1.0);
        
-       .hero__name, .hero__title {
-        font-size: 32px;
-       }
+        @keyframes slide-fade {
+            from {
+              margin-top: 20%;
+              color: black
+            }
+            to {
+              margin-top: 0%;
+              color: white;
+            }
+        }
+
+        .hero__name, .hero__title {
+            font-size: 32px;
+            line-height: 1.1;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            // font-family: 'Plus Jakarta Sans';
+        }
+   
+    }
+
+
+
+   .skills {
+        @include center;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: center;
+
+        .skills__header {
+            
+        }
    }
 
 }
